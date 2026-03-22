@@ -1,5 +1,6 @@
 from main_helper import get_user_input, save_machine_to_file
 import run_bash_script
+import logger
 
 if __name__ == "__main__":
     instances = get_user_input()

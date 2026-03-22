@@ -1,6 +1,7 @@
 import logging
 import sys
 from logging.handlers import RotatingFileHandler
+import main_helper
 
 
 logger = logging.getLogger("infra_sim")
@@ -24,5 +25,9 @@ def setup_logging():
         logger.addHandler(file_handler)
         logger.addHandler(print_handler)
 
+        logger.info("created log!")
 
+
+
+main_helper.create_dir("logs")
 setup_logging() 

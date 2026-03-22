@@ -34,8 +34,8 @@
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/morry-rubin/infra_automation.git
+cd infra_automation
 ````
 
 ### 2. Create a virtual environment
@@ -64,7 +64,7 @@ pip install -r requirements.txt
 
 ```bash
 For example:
-sudo python3 infra_simulator.py
+sudo python3 src/infra_simulator.py
 ```
 
 ---

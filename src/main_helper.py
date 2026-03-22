@@ -3,10 +3,24 @@ from pydantic import ValidationError
 import json
 import run_bash_script
 import logging
-import logger
+from pathlib import Path
 
 logger = logging.getLogger("infra_sim")
 
+def create_dir(dir_name: str):
+    """
+    this func will creat a dir named *dir_name under INFRA_AUTOMATION
+    it will create the dir and if it and wont raise an error if it alredy exists
+
+    Parameters:
+        dir_name (string): the name of the dir that you want to create under infra_automation.
+ 
+    """
+    print(f"createin {dir_name}")
+    curr_dir = Path(__file__).resolve().parent.parent # to get to the infra dir
+
+    directory_path = Path(curr_dir / dir_name)
+    directory_path.mkdir(parents=True, exist_ok=True)
 
 def get_user_input() -> list[Machine]:
     """
@@ -66,6 +80,7 @@ def save_machine_to_file(machines: list[Machine]):
     """
 
     machines_json = []
+    create_dir("configs")
     with open("configs/instances.json", "w") as f:
         for machine in machines:
             machines_json.append(machine.to_dict())
