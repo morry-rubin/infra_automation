@@ -1,0 +1,6 @@
+.venv
+logs/
+*.log
+instances.json
+
+__pycache__
