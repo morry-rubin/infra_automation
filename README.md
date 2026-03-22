@@ -3,7 +3,7 @@
 
 `infra_simulator.py` is a simple infrastructure simulation tool that allows users to create virtual "machine" objects by entering system specifications. The program stores all created instances in a JSON file and automatically installs and enabling NGINX via a bash script.
 
----
+--- 
 
 ## 🚀 Features
 
